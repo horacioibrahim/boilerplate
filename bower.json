@@ -1,0 +1,28 @@
+{
+  "name": "boilerplate",
+  "description": "boilerplate for webapp, wpa, spa",
+  "main": "index.html",
+  "authors": [
+    "Horacio Ibrahim <horacioibrahim@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "boilerplate"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.6.0",
+    "app-router": "^2.7.0"
+  }
+}
