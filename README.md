@@ -1,0 +1,11 @@
+
+
+
+
+
+
+1) bower init to generate bower.json
+```bower init```
+
+2) npm init to generate package.json
+```npm init```
