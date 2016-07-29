@@ -5,7 +5,10 @@
 
 
 1) bower init to generate bower.json
-```bower init```
+```$ bower init```
 
 2) npm init to generate package.json
-```npm init```
+```$ npm init```
+
+3) Install polymer
+```$ bower install --save polymer```
