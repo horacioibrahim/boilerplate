@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var uglify = require('gulp-uglify');
-var minifyCss = require('gulp-minify-css');
+var minifyCss = require('gulp-clean-css');
 var image = require('gulp-imagemin');
 var vulcanize = require('gulp-vulcanize');
 

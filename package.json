@@ -1,0 +1,22 @@
+{
+  "name": "boilarplate",
+  "version": "0.0.1",
+  "description": "A sample boilerplate to web app using Polymer",
+  "dependencies": {
+    "gulp": "*",
+    "browser-sync": "*",
+    "gulp-uglify": "*",
+    "gulp-clean-css":"*",
+    "gulp-imagemin": "*",
+    "gulp-vulcanize": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/horacioibrahim/boilerplate"
+  },
+  "keywords": [
+    "polymer",
+    "webapp"
+  ],
+  "license": "MIT"
+}
