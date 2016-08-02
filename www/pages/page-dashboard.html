@@ -1,16 +1,42 @@
 <dom-module id="page-dashboard">
 <template>
 <style>
- 
+    .scrollSpace {
+        max-height: 400px;
+        overflow-y: scroll;
+        border: 1px dotted red;
+    }
 </style>
     <tpl-dashboard>
         <span class="author">Content after applied dashboard reuse by template.</span>
         <div>Another content...</div>
+        <div><h1>Icons from iron-icons are supported old browsers?</h1>
+        <iron-icon icon="add"></iron-icon>
+            <iron-icon icon="add-box"></iron-icon>
+            <div>
+                    <div id="scroll" class="scrollSpace">
+                        <iron-scroll-threshold scroll-target="scroll" lower-triggered lower-threshold="2" on-lower-threshold="loadMoreData">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus velit massa, sagittis vel imperdiet at, maximus ut lacus. Sed blandit diam in enim tristique molestie. Suspendisse interdum, arcu ut mollis consectetur, ex nisi elementum dui, non eleifend nisi ante non leo. Suspendisse potenti. Quisque non nulla imperdiet, commodo mi ac, malesuada purus. Sed luctus lectus vitae velit rutrum, et elementum metus rhoncus. Nullam massa mauris, molestie vel tortor vestibulum, faucibus ultrices nisl. Phasellus suscipit nulla mi, quis pretium massa suscipit quis. Donec dictum enim sit amet velit dignissim bibendum. Cras convallis diam ac ligula finibus pellentesque. Cras tristique, tellus id ullamcorper bibendum, mi orci ultricies tortor, sollicitudin hendrerit turpis purus vel turpis. Donec malesuada lorem eu est pellentesque, non interdum massa ultrices.</p>
+
+                        <p>Integer in sem ex. Duis condimentum neque in felis semper laoreet. Fusce non egestas nisi. Praesent vel pellentesque sem. Duis convallis viverra tellus, vel suscipit lorem consectetur at. Vivamus tincidunt ex quis mi aliquet eleifend. Cras sagittis metus ac augue ultricies tempus in sed lectus. Vivamus dapibus nunc sit amet nunc porttitor, ut lacinia ex ullamcorper.</p>
+
+                        <p>Etiam ut nisi fermentum, congue enim non, faucibus ante. Mauris odio ante, scelerisque vitae venenatis a, venenatis ut felis. Nulla at metus sit amet magna interdum tincidunt sit amet pellentesque odio. Morbi sed urna vitae lacus pulvinar dictum ac et arcu. Aliquam fringilla lacus a metus efficitur dictum. Sed laoreet hendrerit ullamcorper. Maecenas egestas, nunc vel sodales egestas, nunc elit venenatis nisi, porta molestie elit odio at sapien. Pellentesque aliquam hendrerit leo.</p>
+                        <p>Etiam ut nisi fermentum, congue enim non, faucibus ante. Mauris odio ante, scelerisque vitae venenatis a, venenatis ut felis. Nulla at metus sit amet magna interdum tincidunt sit amet pellentesque odio. Morbi sed urna vitae lacus pulvinar dictum ac et arcu. Aliquam fringilla lacus a metus efficitur dictum. Sed laoreet hendrerit ullamcorper. Maecenas egestas, nunc vel sodales egestas, nunc elit venenatis nisi, porta molestie elit odio at sapien. Pellentesque aliquam hendrerit leo.</p>
+                        <p>Etiam ut nisi fermentum, congue enim non, faucibus ante. Mauris odio ante, scelerisque vitae venenatis a, venenatis ut felis. Nulla at metus sit amet magna interdum tincidunt sit amet pellentesque odio. Morbi sed urna vitae lacus pulvinar dictum ac et arcu. Aliquam fringilla lacus a metus efficitur dictum. Sed laoreet hendrerit ullamcorper. Maecenas egestas, nunc vel sodales egestas, nunc elit venenatis nisi, porta molestie elit odio at sapien. Pellentesque aliquam hendrerit leo.</p>
+                        <p>Etiam ut nisi fermentum, congue enim non, faucibus ante. Mauris odio ante, scelerisque vitae venenatis a, venenatis ut felis. Nulla at metus sit amet magna interdum tincidunt sit amet pellentesque odio. Morbi sed urna vitae lacus pulvinar dictum ac et arcu. Aliquam fringilla lacus a metus efficitur dictum. Sed laoreet hendrerit ullamcorper. Maecenas egestas, nunc vel sodales egestas, nunc elit venenatis nisi, porta molestie elit odio at sapien. Pellentesque aliquam hendrerit leo.</p>                        
+                        </iron-scroll-threshold>
+                    </div>
+            </div>
+        </div>
     </tpl-dashboard>
 </template>
 <script>
 Polymer({
-    is: 'page-dashboard'
+    is: 'page-dashboard',
+    loadMoreData: function() {
+        // load async stuff. e.g. XHR
+        alert("Bteu!");
+  }    
 });
 </script>
 </dom-module>
