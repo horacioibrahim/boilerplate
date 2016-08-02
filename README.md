@@ -14,7 +14,9 @@
 3) Install polymer
 ```$ bower install --save polymer```
 
-* Many components with flex and animation via keyframes not work fine 
+Well supported components
+---------------------------
+Many components with flex and animation via keyframes not work fine 
 in old browsers (between 2009-2012). Above the list of the components tested:
 
 - iron-icon and iron-icons
