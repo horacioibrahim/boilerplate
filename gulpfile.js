@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-clean-css');
 var image = require('gulp-imagemin');
 var vulcanize = require('gulp-vulcanize');
+var sass = require('gulp-sass')
 
 // watch files for changes and reload
 gulp.task('serve', function(){
@@ -38,6 +39,16 @@ gulp.task('image', function(){
     gulp.src('www/img/media/*')
        .pipe(image())
        .pipe(gulp.dest('dist/img/media'));
+});
+// sass compile
+gulp.task('sass', function () {
+  return gulp.src('./www/vendor/materialize/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./www/css'));
+});
+ 
+gulp.task('sass:watch', function () {
+  gulp.watch('./www/vendor/materialize/sass/**/*.scss', ['sass']);
 });
 // compress 'minify' the polymer ;)
 gulp.task('vulcanize', function(){
