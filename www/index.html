@@ -66,7 +66,7 @@
             dom: 'shadow',
             lazyRegister: true
           };
-
+        
           // Load webcomponentsjs polyfill if browser does not support native Web Components
           (function() {
             'use strict';
@@ -90,15 +90,15 @@
             if (!webComponentsSupported) {
               var script = document.createElement('script');
               script.async = true;
-              script.src = '/vendor/webcomponentsjs/webcomponents-lite.min.js';
+              script.src = 'vendor/webcomponentsjs/webcomponents-lite.min.js';
               script.onload = onload;
               document.head.appendChild(script);
             } else {
               onload();
             }
           })();
-
         </script>
+        
         <link href="__imports__.html" rel="import">
         <link rel="import" href="app-elements/app-shell.html">
 </head>
