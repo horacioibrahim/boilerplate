@@ -29,10 +29,6 @@
     "iron-scroll-threshold": "PolymerElements/iron-scroll-threshold#^1.0.1",
     "iron-swipeable-container": "PolymerElements/iron-swipeable-container#^1.0.3",
     "iron-list": "PolymerElements/iron-list#^1.0.3",
-<<<<<<< HEAD
     "materialize":"*"
-=======
-    "materialize":"*" 
->>>>>>> 592fd11ea943d747616e2bdfa037834f1c4ec4d0
   }
 }
