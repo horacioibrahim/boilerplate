@@ -22,6 +22,12 @@ gulp.task('minify-js', function(){
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
+// sass compile
+gulp.task('sass', function () {
+  return gulp.src('./www/vendor/materialize/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./www/css'));
+});
 // compress css
 gulp.task('minify-css', function(){
     return gulp.src('www/css/*.css')
@@ -34,19 +40,7 @@ gulp.task('image', function(){
        .pipe(image())
        .pipe(gulp.dest('dist/img'));
 });
-// compress image
-gulp.task('image', function(){
-    gulp.src('www/img/media/*')
-       .pipe(image())
-       .pipe(gulp.dest('dist/img/media'));
-});
-// sass compile
-gulp.task('sass', function () {
-  return gulp.src('./www/vendor/materialize/sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./www/css'));
-});
- 
+
 gulp.task('sass:watch', function () {
   gulp.watch('./www/vendor/materialize/sass/**/*.scss', ['sass']);
 });
@@ -62,11 +56,10 @@ gulp.task('vulcanize', function(){
 
 // copy polymer elements required
 gulp.src(['www/fonts/**/*']).pipe(gulp.dest('./dist/fonts'));
-gulp.src(['www/elements/**/*']).pipe(gulp.dest('./dist/elements'));
+gulp.src(['www/app-elements/**/*']).pipe(gulp.dest('./dist/app-elements'));
 gulp.src(['www/pages/**/*']).pipe(gulp.dest('./dist/pages'));
 gulp.src(['www/templates/**/*']).pipe(gulp.dest('./dist/templates'));
 gulp.src(['www/vendor/**/*']).pipe(gulp.dest('./dist/vendor'));
-gulp.src(['www/css/font-awesome/**/*']).pipe(gulp.dest('./dist/css/font-awesome'));
 
 // distribution task
-gulp.task('dist', ['minify-css', 'image', 'minify-js', 'vulcanize']);
+gulp.task('dist', ['sass', 'minify-css', 'image', 'minify-js', 'vulcanize']);
