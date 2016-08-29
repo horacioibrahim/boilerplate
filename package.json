@@ -9,7 +9,8 @@
     "gulp-clean-css":"*",
     "gulp-imagemin": "*",
     "gulp-vulcanize": "*",
-    "gulp-sass": "*"
+    "gulp-sass": "*",
+    "polymer-cli": "*"
   },
   "repository": {
     "type": "git",
